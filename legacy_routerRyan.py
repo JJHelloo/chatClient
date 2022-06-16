@@ -71,7 +71,7 @@ def myNetwork():
     net.get('s1').start([c0])
 
     info( '*** Post configure switches and hosts\n')
-    
+    # connect static routes so that each router has access to non-directly connected subnets
     r3.cmd('sudo ip route add 10.0.1.0/24 via 192.168.0.2 dev r3-eth1')
     r3.cmd('sudo ip route add 192.168.1.0/30 via 192.168.0.2 dev r3-eth1')
     r4.cmd('sudo ip route add 10.0.0.0/24 via 192.168.0.1 dev r4-eth0')
