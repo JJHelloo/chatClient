@@ -65,17 +65,17 @@ sudo update-ca-certificates
 
 # Generate the Server Certificate
 # Generate a new 2048-bit RSA private key for your server
-openssl genrsa -out cst311.test-key.pem 2048
+openssl genrsa -out cst311.webpa4-key.pem 2048
 
 #Generate a certificate signing request to send to the root CA using the private key generated above
 #Auto fill requested information
-openssl req -new -config /etc/ssl/openssl.cnf -key cst311.test-key.pem -out cst311.test.csr -subj "/C=US/ST=CA/L=Seaside/O=CST311/OU=Networking/CN=www.webpa4.test"
+openssl req -new -config /etc/ssl/openssl.cnf -key cst311.webpa4-key.pem -out cst311.webpa4.csr -subj "/C=US/ST=CA/L=Seaside/O=CST311/OU=Networking/CN=www.webpa4.test"
 
 #Now use the Root CA to create the X.509 server certificate that is valid for 365 days.  Sign the certificate with the CA certificate
-openssl x509 -req -days 365 -in cst311.test.csr -CA cacert.pem -CAkey ./private/cakey.pem -CAcreateserial -out cst311.test-cert.pem
+openssl x509 -req -days 365 -in cst311.webpa4.csr -CA cacert.pem -CAkey ./private/cakey.pem -CAcreateserial -out cst311.webpa4-cert.pem
 
 echo "You have created a server certificate, that is valid for one year, and signed it with your CA certificate"
 
 #display decrypted server cert
 echo "Decrypted Server Cert"
-openssl x509 -text -noout -in cst311.test-cert.pem
+openssl x509 -text -noout -in cst311.webpa4-cert.pem
