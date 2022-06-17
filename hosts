@@ -1,13 +1,7 @@
-# this file lives in /etc and needs to be modified to work with our topology
-# see comments for lines needing to be updated from the defaults in Lab6
-127.0.0.1	localhost
-127.0.1.1	mininet-vm
-          # Common Name (CN) of the CA server using the local host IP address:
-127.0.0.1	ca.csumb.test
-          # SSL webserver entered from the certificate request in Part 2
-          #For this web server IP address, use the default address given to the host h2
-          #in the basic mininet topology (10.0.0.2)
-10.0.0.2	www.webpa4.test
+127.0.0.1       localhost
+127.0.1.1       mininet-vm
+127.0.0.1       ca.cst311.test
+10.0.0.2        www.webpa4.test
 # The following lines are desirable for IPv6 capable hosts
 ::1     localhost ip6-localhost ip6-loopback
 ff02::1 ip6-allnodes

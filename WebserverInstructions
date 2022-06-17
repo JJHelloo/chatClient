@@ -1,15 +1,14 @@
 To fullfil the webserver requirement:
 
-CAbash.sh can live in the CST311/ folder on the mininet VM that is running the emulation.
+createCA.sh can live in the CST311/ folder on the mininet VM that is running the emulation.
 
-When running CAbash.sh:
+When running createCA.sh:
 Server CN entered during root CA creation needs to be ca.csumb.test
 ** Get a screen capture of the last cert decryption that displays, labeled in the script as "GET A SCREEN SHOT FOR SUBMISSION"
 
 Modify existing config file on VM:
 The VM host file on the machine we are running the emulation on needs to be updated:
 nano /etc/hosts
-
 The host file on Replit defines what needs to change, it needs to match our topology.
 
 Enabling webserver on h2:
