@@ -1,0 +1,27 @@
+To fullfil the webserver requirement:
+
+CAbash.sh can live in the CST311/ folder on the mininet VM that is running the emulation.
+
+When running CAbash.sh:
+Server CN entered during root CA creation needs to be ca.csumb.test
+** Get a screen capture of the last cert decryption that displays, labeled in the script as "GET A SCREEN SHOT FOR SUBMISSION"
+
+Modify existing config file on VM:
+The VM host file on the machine we are running the emulation on needs to be updated:
+nano /etc/hosts
+
+The host file on Replit defines what needs to change, it needs to match our topology.
+
+Enabling webserver on h2:
+sslwebserver.py can be stored in CST311/ folder, but needs to be run on h2 (webserver)
+
+Submission requirements:
+
+from one of the hosts, run wget https://www.webpa4.test:4443
+**we need a screen capture of a successful wget
+
+Screenshot of decrypted web server certificate
+** noted above for CAbash.sh
+
+createCA.sh file to be turned in
+sslwebserver.py file to be turned in
